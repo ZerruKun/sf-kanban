@@ -1,0 +1,6 @@
+.general {
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    background-color: #0067A3;
+}

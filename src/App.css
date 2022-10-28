@@ -1,0 +1,9 @@
+@font-face {
+    src: url("./fonts/Roboto-Regular.ttf");
+    font-family: "Roboto";
+}
+
+.App {
+    max-width: 1235px;
+    margin: 10px auto;
+}

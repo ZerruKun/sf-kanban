@@ -1,7 +1,10 @@
-function App() {
+import './App.css';
+import Header from './components/Header/Header';
+
+const App = () => {
   return (
     <div className="App">
-      Я живой.
+      <Header />
     </div>
   );
 }
