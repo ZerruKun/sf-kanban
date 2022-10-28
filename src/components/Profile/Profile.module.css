@@ -1,0 +1,14 @@
+.general {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.image {
+    width: 38px;
+    height: 38px;
+}
+
+.button {
+    margin-left: 7px;
+}
