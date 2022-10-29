@@ -1,4 +1,10 @@
 .general {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    width: 102px;
     margin-bottom: 8px;
     margin-left: 12px;
     padding: 6px;
@@ -12,6 +18,10 @@
     border-radius: 5px;
 }
 
-.general:hover {
+.button:hover {
     background-color:#003d60;
+}
+
+.input {
+    margin: 0 12px 12px;
 }
