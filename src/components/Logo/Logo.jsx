@@ -4,7 +4,7 @@ import styles from "./Logo.module.css"
 const Logo = () => {
   return (
     <div>
-        <span className={styles.logo}>Awesome Kanban Board</span>
+        <h1 className={styles.logo}>Awesome Kanban Board</h1>
     </div>
   )
 }
