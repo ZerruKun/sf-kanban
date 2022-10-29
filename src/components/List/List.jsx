@@ -1,4 +1,5 @@
 import React from 'react';
+import CardSelect from '../ui/CardSelect/CardSelect';
 import styles from "./List.module.css";
 
 const List = () => {
@@ -9,6 +10,7 @@ const List = () => {
         <div className={styles.task}>Test</div>
         <div className={styles.task}>Test</div>
       </div>
+      <CardSelect />
     </div>
   )
 }
