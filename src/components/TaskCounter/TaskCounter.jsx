@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from "./TaskCounter.module.css"
+import React from "react";
+import styles from "./TaskCounter.module.css";
 
 const TaskCounter = () => {
   return (
@@ -7,7 +7,7 @@ const TaskCounter = () => {
       <span>Active tasks: "Num"</span>
       <span className={styles.finishedTasks}>Finished tasks: "Num"</span>
     </div>
-  )
-}
+  );
+};
 
-export default TaskCounter
+export default TaskCounter;

@@ -1,7 +1,7 @@
-import './App.css';
-import Header from './components/Header/Header';
+import "./App.css";
+import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
-import Footer from './components/Footer/Footer';
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -11,6 +11,6 @@ const App = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

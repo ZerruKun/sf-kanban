@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from "./Main.module.css"
-import List from '../List/List'
+import React from "react";
+import styles from "./Main.module.css";
+import List from "../List/List";
 
 const Main = () => {
   return (
@@ -10,7 +10,7 @@ const Main = () => {
       <List />
       <List />
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;
