@@ -1,17 +1,18 @@
 import React from "react";
 import styles from "./List.module.css";
-import { observer } from "mobx-react-lite";
 
 
-const List = observer((props) => {
+const List = (props) => {
   return (
     <div className={styles.general}>
       <h2 className={styles.heading}>{props.title}</h2>
-      <div className={styles.task}>123</div>
+      {/* Key изменить!!! */}
+      {props.backlog.map(el =>
+      <div className={styles.task} key={el.name}>
+        {el.name}
+      </div>)}
     </div>
-
-// {props.backlog}
   );
-});
+};
 
 export default List;
