@@ -7,14 +7,14 @@ const AddButton = (props) => {
 
   const [isAddActive, setIsAddActive] = useState(false);
 
-  const showAddMenu = () => {
-    setIsAddActive(true);
+  const showAddMenu = (status) => {
+    setIsAddActive(status);
   }
 
   return (
     <>
-      {isAddActive ? props.title === "Backlog" ? (<Submit />) : (<CardSelect />) 
-      : (<button className={styles.general} onClick={showAddMenu}>+ Add card</button>)}
+      {isAddActive ? props.title === "Backlog" ? (<Submit showAddMenu={showAddMenu}/>) : (<CardSelect />) 
+      : (<button className={styles.general} onClick={() => showAddMenu(true)}>+ Add card</button>)}
     </>
   )
 };

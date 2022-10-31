@@ -4,7 +4,7 @@ import tasks from "../../../store/tasks";
 import { observer } from "mobx-react-lite";
 import nextId from "react-id-generator";
 
-const Submit = observer(() => {
+const Submit = observer((props) => {
   let taskId = nextId();
   
   return (
@@ -17,7 +17,7 @@ const Submit = observer(() => {
       />
       <button 
         className={styles.button} 
-        onClick={() => tasks.addCard(taskId, tasks.taskName)}>
+        onClick={() => {tasks.addCard(taskId, tasks.taskName); props.showAddMenu(false)}}>
           Submit
       </button>
     </div>
