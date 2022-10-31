@@ -8,9 +8,9 @@ const Main = () => {
   return (
     <div className={styles.general}>
       <List backlog={tasks.backlog} title="Backlog" addCard={tasks.addCard}/>
-      <List backlog={tasks.backlog} title="Ready"/>
-      <List backlog={tasks.backlog} title="In progress"/>
-      <List backlog={tasks.backlog} title="Finished"/>
+      <List backlog={tasks.ready} title="Ready"/>
+      <List backlog={tasks.inProgress} title="In progress"/>
+      <List backlog={tasks.finished} title="Finished"/>
     </div>
   );
 };

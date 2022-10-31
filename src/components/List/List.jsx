@@ -1,6 +1,5 @@
-import React from "react";
 import styles from "./List.module.css";
-import Submit from "../ui/Submit/Submit";
+import AddCard from "../ui/AddCard/AddCard"
 import { observer } from "mobx-react-lite";
 
 const List = observer((props) => {
@@ -8,11 +7,12 @@ const List = observer((props) => {
     <div className={styles.general}>
       <h2 className={styles.heading}>{props.title}</h2>
       {props.backlog.map(el =>
-      <div className={styles.task} key={el.id}>
-        {el.name}
-      </div>)}
+        <div className={styles.task} key={el.id}>
+          {el.name}
+        </div>)
+      }
       {/* Временно */}
-      <Submit />
+      <AddCard title={props.title}/>
     </div>
   );
 });
