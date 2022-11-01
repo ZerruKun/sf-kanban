@@ -1,7 +1,9 @@
 const { makeAutoObservable } = require("mobx");
 
 class Tasks {
-  //стейт
+  //Стейт
+
+  //Массивы с задачами
   backlog = [
     {
       id: 1,
@@ -22,12 +24,18 @@ class Tasks {
   ready = [];
   inProgress = [];
   finished = [];
+
+  //Название (name) задачи для инпута Submit
   taskName = "";
-  //Наблюдение без запарки
+
+  //Observe activated!
   constructor() {
     makeAutoObservable(this);
   }
+
   //Экшены
+
+  //Добавление новой задачи в массив
   addCard(id, name) {
     if(name.trim() === "") {
         return this.taskName = "";
@@ -36,10 +44,12 @@ class Tasks {
     this.taskName = "";
   }
 
+  //Для управляемого инпута в Submit
   setTaskName(task) {
     this.taskName = task;
   }
 
+  //Для переноса задачи из предыдущего списка в текущий
   chooseCard(el, addTo, deleteFrom) {
     addTo.push(el);
     for (var i = 0; i < deleteFrom.length; i++) {

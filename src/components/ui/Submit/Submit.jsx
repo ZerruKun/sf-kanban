@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Submit.module.css";
 import tasks from "../../../store/tasks";
 import { observer } from "mobx-react-lite";
+// Использовано для простой генерации id
 import nextId from "react-id-generator";
 
 const Submit = observer((props) => {
