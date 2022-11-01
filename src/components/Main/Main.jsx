@@ -7,10 +7,10 @@ const Main = () => {
 
   return (
     <div className={styles.general}>
-      <List backlog={tasks.backlog} title="Backlog" addCard={tasks.addCard}/>
-      <List backlog={tasks.ready} title="Ready"/>
-      <List backlog={tasks.inProgress} title="In progress"/>
-      <List backlog={tasks.finished} title="Finished"/>
+      <List tasks={tasks.backlog} title="Backlog" addCard={tasks.addCard}/>
+      <List tasks={tasks.ready} choice={tasks.backlog} title="Ready"/>
+      <List tasks={tasks.inProgress} choice={tasks.ready} title="In progress"/>
+      <List tasks={tasks.finished} choice={tasks.inProgress} title="Finished"/>
     </div>
   );
 };

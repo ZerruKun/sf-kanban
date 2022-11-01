@@ -6,13 +6,12 @@ const List = observer((props) => {
   return (
     <div className={styles.general}>
       <h2 className={styles.heading}>{props.title}</h2>
-      {props.backlog.map(el =>
+      {props.tasks.map(el =>
         <div className={styles.task} key={el.id}>
           {el.name}
         </div>)
       }
-      {/* Временно */}
-      <AddCard title={props.title}/>
+      <AddCard title={props.title} tasks={props.tasks} choice={props.choice}/>
     </div>
   );
 });

@@ -1,16 +1,21 @@
+import { observer } from "mobx-react-lite";
 import React from "react";
 import styles from "./CardSelect.module.css";
 
-const CardSelect = () => {
+const CardSelect = observer((props) => {
+
+  console.log(props.choice)
+
   return (
     <select className={styles.general}>
       <option></option>
-      <option>Test1</option>
-      <option>Test2</option>
-      <option>Test3</option>
-      <option>Test4</option>
+      {props.choice.map(el =>
+        <option className={styles.task} key={el.id}>
+          {el.name}
+        </option>)
+      }
     </select>
   );
-};
+});
 
 export default CardSelect;
