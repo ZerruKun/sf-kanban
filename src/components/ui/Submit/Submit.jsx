@@ -17,7 +17,7 @@ const Submit = observer((props) => {
       />
       <button 
         className={styles.button} 
-        onClick={() => {tasks.addCard(taskId, tasks.taskName); props.showAddMenu(false)}}>
+        onClick={() => {tasks.addCard(taskId, tasks.taskName); props.toogleAddMenu(false)}}>
           Submit
       </button>
     </div>
