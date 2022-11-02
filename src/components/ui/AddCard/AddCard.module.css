@@ -11,7 +11,12 @@
     color: #5E6C84;
 }
 
-.general:hover {
+.general:hover:enabled {
     color: #2f3642;
     background-color: #FFFFFF;
+}
+
+.general:disabled {
+    color: #bfc4ce;
+    cursor: default;
 }
