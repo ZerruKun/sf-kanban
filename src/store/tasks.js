@@ -7,18 +7,18 @@ class Tasks {
   backlog = [
     {
       id: 1,
-      name: "buba",
-      description: "pipa",
+      name: "test1",
+      description: "des1",
     },
     {
       id: 2,
-      name: "buba2",
-      description: "pipa2",
+      name: "test2",
+      description: "des2",
     },
     {
       id: 3,
-      name: "buba3",
-      description: "pipa3",
+      name: "test3",
+      description: "des3",
     },
   ];
   ready = [];

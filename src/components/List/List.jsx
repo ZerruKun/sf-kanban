@@ -1,6 +1,7 @@
 import styles from "./List.module.css";
 import AddCard from "../ui/AddCard/AddCard"
 import { observer } from "mobx-react-lite";
+import { Link } from "react-router-dom";
 
 const List = observer((props) => {
   return (
@@ -8,6 +9,7 @@ const List = observer((props) => {
       <h2 className={styles.heading}>{props.title}</h2>
       {props.tasks.map(el =>
         <div className={styles.task} key={el.id}>
+          <Link to={`/tasks/${el.id}`}></Link>
           {el.name}
         </div>)
       }

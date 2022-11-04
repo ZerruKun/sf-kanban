@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import styles from "./Main.module.css";
 import Lists from "../Lists/Lists";
 import NotFound from "../NotFound/NotFound"
+import TaskDetails from "../TaskDetails/TaskDetails"
 
 const Main = () => {
 
@@ -11,6 +12,7 @@ const Main = () => {
       <Routes>
         <Route path="/" element={<Lists />}></Route>
         <Route path="*" element={<NotFound />}></Route>
+        <Route path="/tasks/:id" element={<TaskDetails />}></Route>
       </Routes>
     </div>
   );
