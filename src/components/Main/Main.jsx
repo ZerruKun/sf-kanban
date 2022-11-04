@@ -1,16 +1,17 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import styles from "./Main.module.css";
-import List from "../List/List";
-import tasks from "../../store/tasks"
+import Lists from "../Lists/Lists";
+import NotFound from "../NotFound/NotFound"
 
 const Main = () => {
 
   return (
     <div className={styles.general}>
-      <List tasks={tasks.backlog} title="Backlog" addCard={tasks.addCard}/>
-      <List tasks={tasks.ready} choice={tasks.backlog} title="Ready"/>
-      <List tasks={tasks.inProgress} choice={tasks.ready} title="In progress"/>
-      <List tasks={tasks.finished} choice={tasks.inProgress} title="Finished"/>
+      <Routes>
+        <Route path="/" element={<Lists />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
     </div>
   );
 };
