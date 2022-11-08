@@ -36,11 +36,13 @@ class Tasks {
   //Экшены
 
   //Добавление новой задачи в массив
-  addCard(id, name) {
+  addCard(name) {
     if(name.trim() === "") {
         return this.taskName = "";
     }
-    this.backlog.push({id:id, name:name.trim(), description:"There is no description"});
+    let nextId = this.backlog.length + this.ready.length + this.inProgress.length + this.finished.length + 1;
+    console.log(nextId);
+    this.backlog.push({id:nextId, name:name.trim(), description:"There is no description"});
     this.taskName = "";
   }
 
