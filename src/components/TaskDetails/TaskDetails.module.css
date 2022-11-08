@@ -38,6 +38,27 @@
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 27px;
     color: #000000;
+}
+
+.input {
+    display: block;
+}
+
+.button {
+    margin-top: 15px;
+    padding: 6px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background: #0079BF;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color:#003d60;
 }

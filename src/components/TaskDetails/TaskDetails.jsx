@@ -4,8 +4,10 @@ import tasks from "../../store/tasks";
 import NotFound from "../NotFound/NotFound";
 import styles from "./TaskDetails.module.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const TaskDetails = () => {
+  //Определить задачу по id для дальнейшей отрисовки.
   const allTasks = [tasks.backlog, tasks.ready, tasks.inProgress, tasks.finished];
   const { id } = useParams();
   let task = {};
@@ -16,6 +18,28 @@ const TaskDetails = () => {
       }
     });
   });
+
+  //Состояния требуются только по месту, поэтому не вынесены в глобальный стор.
+
+  //Состояние для отображение кнопки.
+  const [isChanging, setIsChanging] = useState(false);
+
+  //Состояние и метод для управляемого инпута.
+  const [description, setDescription] = useState(task.description);
+
+  const addDescription = (description) => {
+    setDescription(description);
+  }
+
+  //Методы кнопок
+  const changeDescription = () => {
+    setIsChanging(true);
+  }
+
+  const saveChanges = () => {
+    task.description = description;
+    setIsChanging(false);
+  }
 
   return (
     <div>
@@ -36,7 +60,21 @@ const TaskDetails = () => {
               </Link>
             </div>
             <div className={styles.taskDescription}>
-              {task.description}
+              {isChanging ? (
+                <>
+                  <input
+                    className={styles.input}
+                    value={description}
+                    onChange={event => addDescription(event.target.value)}
+                  />
+                  <button className={styles.button} onClick={saveChanges}>Save Changes</button>
+                </>
+              ) : (
+                <>
+                  <p>{task.description}</p>
+                  <button className={styles.button} onClick={changeDescription}>Change description</button>
+                </>
+              )}
             </div>
           </div>
         </div>
