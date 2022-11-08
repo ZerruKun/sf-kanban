@@ -11,8 +11,8 @@ const Main = () => {
     <div className={styles.general}>
       <Routes>
         <Route path="/" element={<Lists />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
         <Route path="/tasks/:id" element={<TaskDetails />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </div>
   );
