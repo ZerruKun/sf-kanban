@@ -11,11 +11,9 @@ const List = observer((props) => {
     <div className={styles.general}>
       <h2 className={styles.heading}>{props.title}</h2>
       {props.tasks.map(el =>
-        <Link to={`/tasks/${el.id}`} key={el.id}>
-          <div className={styles.task}>
-              {el.name} 
-          </div>
-        </Link>
+            <Link className={styles.task} to={`/tasks/${el.id}`} key={el.id}>
+              {el.name}
+            </Link>
         )
       }
       <AddCard title={props.title} tasks={props.tasks} choice={props.choice}/>
