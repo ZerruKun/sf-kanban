@@ -3,7 +3,7 @@ import styles from "./Profile.module.css";
 
 const Profile = () => {
 
-  //Состояние намеренно оставлено в компоненте
+  //Состояние требуется только по месту, поэтому не вынесено в глобальный стор
   const [isMenuActive, setIsMenuActive] = useState(false);
 
   const toogleProfileMenu = () => {

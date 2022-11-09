@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const TaskDetails = () => {
-  //Определить задачу по id для дальнейшей отрисовки.
+  //Определить задачу по id для дальнейшей отрисовки
   const allTasks = [tasks.backlog, tasks.ready, tasks.inProgress, tasks.finished];
   const { id } = useParams();
   let task = {};
@@ -19,12 +19,12 @@ const TaskDetails = () => {
     });
   });
 
-  //Состояния требуются только по месту, поэтому не вынесены в глобальный стор.
+  //Состояния требуются только по месту, поэтому не вынесены в глобальный стор
 
-  //Состояние для отображение кнопки.
+  //Состояние для отображение кнопки
   const [isChanging, setIsChanging] = useState(false);
 
-  //Состояние и метод для управляемого инпута.
+  //Состояние и метод для управляемого инпута
   const [description, setDescription] = useState(task.description);
 
   const addDescription = (description) => {

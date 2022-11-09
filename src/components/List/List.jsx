@@ -4,9 +4,6 @@ import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 
 const List = observer((props) => {
-  // {props.tasks.map(el => {
-  //   console.log(el.id)
-  // })}
   return (
     <div className={styles.general}>
       <h2 className={styles.heading}>{props.title}</h2>

@@ -4,26 +4,7 @@ class Tasks {
   //Стейт
 
   //Массивы с задачами
-  backlog = [
-    {
-      id: 1,
-      category: "backlog",
-      name: "test1",
-      description: "des1",
-    },
-    {
-      id: 2,
-      category: "backlog",
-      name: "test2",
-      description: "des2",
-    },
-    {
-      id: 3,
-      category: "backlog",
-      name: "test3",
-      description: "des3",
-    },
-  ];
+  backlog = [];
   ready = [];
   inProgress = [];
   finished = [];
@@ -43,6 +24,7 @@ class Tasks {
     if(name.trim() === "") {
         return this.taskName = "";
     }
+    //Привоение id. Удаление карточки отсутсвует, поэтому данный способ считаю уместным
     let nextId = this.backlog.length + this.ready.length + this.inProgress.length + this.finished.length + 1;
     let newCard = {id:nextId, category:"backlog", name:name.trim(), description:"There is no description"};
     this.backlog.push(newCard);
