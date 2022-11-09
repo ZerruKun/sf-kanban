@@ -38,6 +38,7 @@ const TaskDetails = () => {
 
   const saveChanges = () => {
     task.description = description;
+    localStorage.setItem(`${task.id}`, JSON.stringify(task));
     setIsChanging(false);
   }
 
