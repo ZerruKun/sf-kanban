@@ -1,5 +1,5 @@
 import styles from "./List.module.css";
-import AddCard from "../ui/AddCard/AddCard"
+import AddCard from "../AddCard/AddCard"
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
 

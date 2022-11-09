@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Submit.module.css";
-import tasks from "../../../store/tasks";
+import tasks from "../../store/tasks";
 import { observer } from "mobx-react-lite";
 
 const Submit = observer((props) => {
