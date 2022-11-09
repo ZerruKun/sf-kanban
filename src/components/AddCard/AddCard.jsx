@@ -24,11 +24,11 @@ const AddButton = observer((props) => {
     return result;
   }
 
-  //props.title захардкодил, так как эти параметры не планируются к изменению
+  //Сравнение с props.title захардкодил, так как это параметр не планируются к изменению
   return (
     <>
       {isAddActive ? props.title === "Backlog" ? (<Submit toogleAddMenu={toogleAddMenu}/>) 
-      : (<CardSelect tasks={props.tasks} choice={props.choice} toogleAddMenu={toogleAddMenu}/>) 
+      : (<CardSelect title={props.title} tasks={props.tasks} choice={props.choice} toogleAddMenu={toogleAddMenu}/>) 
       : (arrayLength(props.choice) > 0 || props.title === "Backlog") 
       ? (<button className={styles.general} onClick={() => toogleAddMenu(true)}>+ Add card</button>)
       : (<button className={styles.general} disabled>+ Add card</button>)

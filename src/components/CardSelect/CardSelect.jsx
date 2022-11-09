@@ -16,7 +16,7 @@ const CardSelect = observer((props) => {
         {props.choice.map(el =>
           <div 
             className={styles.task} key={el.id} 
-            onClick={() => {tasks.chooseCard(el, props.tasks, props.choice); props.toogleAddMenu(false)}}
+            onClick={() => {tasks.chooseCard(el, props.title, props.tasks, props.choice); props.toogleAddMenu(false)}}
           >
             {el.name}
           </div>)

@@ -37,9 +37,11 @@ class Tasks {
     this.taskName = task;
   }
 
-  //Для переноса задачи из предыдущего списка в текущий
-  chooseCard(el, addTo, deleteFrom) {
+  //Переноса задачи из предыдущего списка в текущий, запись изменений в localStorage.
+  chooseCard(el, title, addTo, deleteFrom) {
+    el.category = title.toLowerCase().replace(/[^a-zA-Z]+(.)/g, (m, chr) => chr.toUpperCase());
     addTo.push(el);
+    localStorage.setItem(`${el.id}`, JSON.stringify({id:el.id, category:el.category, name:el.name, description:el.description}));
     for (var i = 0; i < deleteFrom.length; i++) {
       if (deleteFrom[i].id === el.id) {
         deleteFrom.splice(i, 1);
