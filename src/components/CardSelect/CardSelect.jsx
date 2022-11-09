@@ -5,8 +5,13 @@ import { observer } from "mobx-react-lite";
 
 const CardSelect = observer((props) => {
   return (
-    <select className={styles.general}>
-      <option></option>
+    <div>
+      <div className={styles.emptyTask} onClick={() => props.toogleAddMenu(false)}>
+        <img
+          src={require("../../img/ui/checkmark.svg").default}
+          alt="check mark"
+        />
+      </div>
       {props.choice.map(el =>
         <option 
           className={styles.task} key={el.id} 
@@ -15,7 +20,7 @@ const CardSelect = observer((props) => {
           {el.name}
         </option>)
       }
-    </select>
+    </div>
   );
 });
 
