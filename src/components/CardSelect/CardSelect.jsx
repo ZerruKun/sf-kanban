@@ -12,14 +12,16 @@ const CardSelect = observer((props) => {
           alt="check mark"
         />
       </div>
-      {props.choice.map(el =>
-        <option 
-          className={styles.task} key={el.id} 
-          onClick={() => {tasks.chooseCard(el, props.tasks, props.choice); props.toogleAddMenu(false)}}
-        >
-          {el.name}
-        </option>)
-      }
+      <div className={styles.taskList}>
+        {props.choice.map(el =>
+          <div 
+            className={styles.task} key={el.id} 
+            onClick={() => {tasks.chooseCard(el, props.tasks, props.choice); props.toogleAddMenu(false)}}
+          >
+            {el.name}
+          </div>)
+        }
+      </div>
     </div>
   );
 });
