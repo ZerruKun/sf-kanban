@@ -48,8 +48,9 @@ const Profile = () => {
         </div>
         {isMenuActive ? (
           <ul className={styles.menuItems}>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Log Out</a></li>
+            {/* Ссылки, чтобы реакт не ругался */}
+            <li><a href="localhost:3000/profile">Profile</a></li>
+            <li><a href="localhost:3000/logout">Log Out</a></li>
           </ul>
         ) : (
           false
