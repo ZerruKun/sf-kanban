@@ -7,3 +7,10 @@
     max-width: 1235px;
     margin: 10px auto;
 }
+
+/*Подходит для 300px*/
+@media screen and (max-width: 480px) {
+    .App {
+        margin: 0px auto;
+    }
+}

@@ -1,5 +1,5 @@
 .taskList {
-    height: 150px;
+    max-height: 150px;
     overflow-x:hidden;
     overflow-y:auto;
 }

@@ -5,3 +5,9 @@
     justify-content: space-between;
     background-color: #0067A3;
 }
+
+@media screen and (max-width: 720px) {
+    .general {
+        flex-direction: column;
+    }
+}

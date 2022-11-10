@@ -1,3 +1,10 @@
+.general {
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
 .avatar {
     margin-top: 5px;
     margin-right: 15px;

@@ -6,21 +6,26 @@ import { observer } from "mobx-react-lite";
 const CardSelect = observer((props) => {
   return (
     <div>
-      <div className={styles.emptyTask} onClick={() => props.toogleAddMenu(false)}>
+      <div
+        className={styles.emptyTask}
+        onClick={() => props.toogleAddMenu(false)}>
         <img
           src={require("../../img/ui/checkmark.svg").default}
           alt="check mark"
         />
       </div>
       <div className={styles.taskList}>
-        {props.choice.map(el =>
-          <div 
-            className={styles.task} key={el.id} 
-            onClick={() => {tasks.chooseCard(el, props.tasks, props.choice); props.toogleAddMenu(false)}}
-          >
+        {props.choice.map((el) => (
+          <div
+            className={styles.task}
+            key={el.id}
+            onClick={() => {
+              tasks.chooseCard(el, props.title, props.tasks, props.choice);
+              props.toogleAddMenu(false);
+            }}>
             {el.name}
-          </div>)
-        }
+          </div>
+        ))}
       </div>
     </div>
   );
