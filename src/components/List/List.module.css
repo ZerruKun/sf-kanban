@@ -1,5 +1,6 @@
 .general {
     width: 282px;
+    max-height: 750px;
     margin-bottom: 50px;
     font-family: 'Roboto';
     font-style: normal;
@@ -8,6 +9,8 @@
     line-height: 21px;
     border-radius: 10px;
     background-color: #EBECF0;
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 
 .heading {
