@@ -6,16 +6,21 @@ import { observer } from "mobx-react-lite";
 const Submit = observer((props) => {
   return (
     <div className={styles.general}>
-      <input 
+      <input
         className={styles.input}
         placeholder="Enter task name"
         value={tasks.taskName}
-        onChange={(event) => {tasks.setTaskName(event.target.value)}}
+        onChange={(event) => {
+          tasks.setTaskName(event.target.value);
+        }}
       />
-      <button 
-        className={styles.button} 
-        onClick={() => {tasks.addCard(tasks.taskName); props.toogleAddMenu(false)}}>
-          Submit
+      <button
+        className={styles.button}
+        onClick={() => {
+          tasks.addCard(tasks.taskName);
+          props.toogleAddMenu(false);
+        }}>
+        Submit
       </button>
     </div>
   );

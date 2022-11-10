@@ -2,11 +2,10 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import styles from "./Main.module.css";
 import Lists from "../Lists/Lists";
-import NotFound from "../NotFound/NotFound"
-import TaskDetails from "../TaskDetails/TaskDetails"
+import NotFound from "../NotFound/NotFound";
+import TaskDetails from "../TaskDetails/TaskDetails";
 
 const Main = () => {
-
   return (
     <div className={styles.general}>
       <Routes>

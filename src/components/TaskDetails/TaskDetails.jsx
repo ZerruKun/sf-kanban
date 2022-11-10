@@ -8,7 +8,12 @@ import { useState } from "react";
 
 const TaskDetails = () => {
   //Определить задачу по id для дальнейшей отрисовки
-  const allTasks = [tasks.backlog, tasks.ready, tasks.inProgress, tasks.finished];
+  const allTasks = [
+    tasks.backlog,
+    tasks.ready,
+    tasks.inProgress,
+    tasks.finished,
+  ];
   const { id } = useParams();
   let task = {};
   allTasks.forEach((el) => {
@@ -29,18 +34,18 @@ const TaskDetails = () => {
 
   const addDescription = (description) => {
     setDescription(description);
-  }
+  };
 
   //Методы кнопок
   const changeDescription = () => {
     setIsChanging(true);
-  }
+  };
 
   const saveChanges = () => {
     task.description = description;
     localStorage.setItem(`${task.id}`, JSON.stringify(task));
     setIsChanging(false);
-  }
+  };
 
   return (
     <div>
@@ -48,7 +53,7 @@ const TaskDetails = () => {
         <NotFound />
       ) : (
         <div className={styles.container}>
-          <div className={styles.general}> 
+          <div className={styles.general}>
             <div className={styles.taskHead}>
               <h2>{task.name}</h2>
               <Link to="/">
@@ -66,14 +71,18 @@ const TaskDetails = () => {
                   <input
                     className={styles.input}
                     value={description}
-                    onChange={event => addDescription(event.target.value)}
+                    onChange={(event) => addDescription(event.target.value)}
                   />
-                  <button className={styles.button} onClick={saveChanges}>Save Changes</button>
+                  <button className={styles.button} onClick={saveChanges}>
+                    Save Changes
+                  </button>
                 </>
               ) : (
                 <>
                   <p>{task.description}</p>
-                  <button className={styles.button} onClick={changeDescription}>Change description</button>
+                  <button className={styles.button} onClick={changeDescription}>
+                    Change description
+                  </button>
                 </>
               )}
             </div>

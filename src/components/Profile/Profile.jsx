@@ -3,17 +3,16 @@ import styles from "./Profile.module.css";
 import { Link } from "react-router-dom";
 
 const Profile = () => {
-
   //Состояние требуется только по месту, поэтому не вынесено в глобальный стор
   const [isMenuActive, setIsMenuActive] = useState(false);
 
   const toogleProfileMenu = () => {
-    if(isMenuActive) {
+    if (isMenuActive) {
       setIsMenuActive(false);
     } else {
       setIsMenuActive(true);
     }
-  }
+  };
 
   return (
     <div className={styles.general}>
@@ -42,16 +41,17 @@ const Profile = () => {
       </div>
       <div className={styles.menu}>
         <div className={styles.cube}>
-          <img
-            src={require("../../img/ui/cube.svg").default}
-            alt="cube"
-          />
+          <img src={require("../../img/ui/cube.svg").default} alt="cube" />
         </div>
         {isMenuActive ? (
           <ul className={styles.menuItems}>
             {/* Ссылки, чтобы реакт не ругался */}
-            <li><Link to="/profile">Profile</Link></li>
-            <li><Link to="/logout">Log Out</Link></li>
+            <li>
+              <Link to="/profile">Profile</Link>
+            </li>
+            <li>
+              <Link to="/logout">Log Out</Link>
+            </li>
           </ul>
         ) : (
           false
