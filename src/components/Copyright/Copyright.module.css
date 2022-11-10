@@ -7,3 +7,17 @@
     line-height: 21px;
     color: #FFFFFF;
 }
+
+@media screen and (max-width: 720px) {
+    .general {
+        margin-right: 0px;
+    }
+}
+
+/*Подходит для 300px*/
+@media screen and (max-width: 480px) {
+    .general {
+       display: flex;
+       text-align: center;
+    }
+}

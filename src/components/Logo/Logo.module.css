@@ -7,3 +7,11 @@
     line-height: 33px;
     color: #FFFFFF;
 }
+
+/*Подходит для 300px*/
+@media screen and (max-width: 480px) {
+    .logo  {
+        margin-left: 0px;
+        text-align: center;
+    }
+}
