@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Profile.module.css";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
 
@@ -49,8 +50,8 @@ const Profile = () => {
         {isMenuActive ? (
           <ul className={styles.menuItems}>
             {/* Ссылки, чтобы реакт не ругался */}
-            <li><a href="localhost:3000/profile">Profile</a></li>
-            <li><a href="localhost:3000/logout">Log Out</a></li>
+            <li><Link to="/profile">Profile</Link></li>
+            <li><Link to="/logout">Log Out</Link></li>
           </ul>
         ) : (
           false
