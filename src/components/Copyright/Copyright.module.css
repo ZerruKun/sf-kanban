@@ -8,15 +8,16 @@
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 740px) {
     .general {
-        margin-right: 0px;
+        margin: 5px 0px;
     }
 }
 
 /*Подходит для 300px*/
 @media screen and (max-width: 480px) {
     .general {
+       margin-top: 0px;
        display: flex;
        text-align: center;
     }

@@ -7,12 +7,14 @@ import TaskDetails from "../TaskDetails/TaskDetails";
 
 const Main = () => {
   return (
-    <div className={styles.general}>
-      <Routes>
-        <Route path="/" element={<Lists />}></Route>
-        <Route path="/tasks/:id" element={<TaskDetails />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
-      </Routes>
+    <div className={styles.mainWrapper}>
+      <div className={styles.general}>
+        <Routes>
+          <Route path="/" element={<Lists />}></Route>
+          <Route path="/tasks/:id" element={<TaskDetails />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
+      </div>
     </div>
   );
 };

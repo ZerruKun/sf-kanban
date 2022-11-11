@@ -12,7 +12,7 @@
     margin-left: 36px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 740px) {
     .general {
         margin-left: 0px;
     }

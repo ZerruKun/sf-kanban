@@ -40,10 +40,12 @@ const Profile = () => {
         )}
       </div>
       <div className={styles.menu}>
-        <div className={styles.cube}>
-          <img src={require("../../img/ui/cube.svg").default} alt="cube" />
-        </div>
+
         {isMenuActive ? (
+          <>
+          <div className={styles.cube}>
+            <img src={require("../../img/ui/cube.svg").default} alt="cube" />
+          </div>
           <ul className={styles.menuItems}>
             {/* Ссылки, чтобы реакт не ругался */}
             <li>
@@ -53,6 +55,7 @@ const Profile = () => {
               <Link to="/logout">Log Out</Link>
             </li>
           </ul>
+          </>
         ) : (
           false
         )}
