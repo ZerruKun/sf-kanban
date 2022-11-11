@@ -1,3 +1,9 @@
-.general {
+.mainWrapper {
     background-color: #0076bd;
+}
+
+.general {
+    max-width: 1235px;
+    min-height: calc(100vh - 110px);
+    margin: 0px auto;
 }

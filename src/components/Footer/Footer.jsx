@@ -5,9 +5,11 @@ import Copyright from "../Copyright/Copyright";
 
 const Footer = () => {
   return (
-    <div className={styles.general}>
-      <TaskCounter />
-      <Copyright />
+    <div className={styles.footerWrapper}>
+      <div className={styles.general}>
+        <TaskCounter />
+        <Copyright />
+      </div>
     </div>
   );
 };
